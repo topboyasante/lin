@@ -7,14 +7,14 @@ import (
 )
 
 func processArray(data []any) {
-	for i, v := range data {
+	for _, v := range data {
 		switch v := v.(type) {
 		case string:
-			fmt.Println(i, "is a string")
+			fmt.Println(v, "is a string")
 		case float64:
-			fmt.Println(i, "is an number")
+			fmt.Println(v, "is an number")
 		case bool:
-			fmt.Println(i, "is a boolean")
+			fmt.Println(v, "is a boolean")
 		case map[string]any:
 			processMap(v)
 		case []any:
